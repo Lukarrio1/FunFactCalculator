@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    <style>
+    input[type=number]::-webkit-inner-spin-button, 
+     input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2 pt-5">
+            <div class="card">
+                <div class="card-header  text-center bg-primary">
+                    <span class="h1 text-white">Calculator</span>
+                </div>
+                <div class="card-body  text-center">
+                        <input type="number" id="num1">
+                        <select name="" id="opt">
+                            <option value="add">+</option>
+                            <option value="sub">-</option>
+                            <option value="div">/</option>
+                            <option value="mul">*</option>
+                        </select> 
+                        <input type="number" id="num2">
+                        <button id="calculate" class="btn btn-success">Calculate</button>
+                        <button id="clear" class="btn btn-danger">Clear</button>
+                </div>
+                <div class="card-footer bg-primary"> 
+                    <span class="h3 text-white">=</span>
+               <span id="result" class="h2">
+                </span>
+                <br>
+                <span id="fact" class="h4 text-white">
+                </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="jquery.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
