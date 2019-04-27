@@ -1,3 +1,5 @@
+$('#isloading').css('display', 'none');
+
 document.getElementById('calculate').addEventListener('click',()=>{
 let opt = document.getElementById('opt').value;
 Operation(opt);
@@ -63,8 +65,18 @@ NumberFact(res)
 }
 
 NumberFact=(num)=>{
+$(document).ajaxStart(function() {
+  	$('#isloading').css('display', 'block');
+  });
+
+  
 $.get(`http://numbersapi.com/${num}`, data => {
   let fact = data;
  document.getElementById('fact').innerHTML=fact;
 })
+
+
+$(document).ajaxComplete(function() {
+  	$('#isloading').css('display', 'none');
+  });
 }
